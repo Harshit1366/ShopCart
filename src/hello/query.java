@@ -88,19 +88,19 @@ public void actionPerformed(ActionEvent e) {
         		properties.put("mail.smtp.auth", "true");
         		properties.put("mail.smtp.starttls.enable", "true");
         		properties.put("mail.smtp.host", "smtp.gmail.com");
-        		properties.put("mail.smtp.user", "harsh1366@gmail.com"); // User name
-        		properties.put("mail.smtp.password", "Harshit@31"); // password
+        		properties.put("mail.smtp.user", "*************"); // User name
+        		properties.put("mail.smtp.password", "*************"); // password
         		properties.put("mail.smtp.port", "587");
         		
 
         		Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
         			protected PasswordAuthentication getPasswordAuthentication() {
-        				return new PasswordAuthentication("harsh1366@gmail.com", "Harshit@31");
+        				return new PasswordAuthentication("***************", "*************");
         			}
         		});
         		try {
         			MimeMessage message = new MimeMessage(session);
-        			message.setFrom(new InternetAddress("harsh1366@gmail.com"));
+        			message.setFrom(new InternetAddress("*******************"));
         			message.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
         			message.setSubject("Query from user : "+first.a);
         			message.setText(t.getText());
